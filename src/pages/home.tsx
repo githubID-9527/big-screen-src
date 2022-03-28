@@ -6,7 +6,6 @@ import {Chart2} from '../components/chart-2';
 
 const px = (n) => n / 2420 * (window as any).pageWidth;
 export const Home = () => {
-  
   return (
     <div className='home'>
       <header style={{backgroundImage: `url(${headBg})` }}></header>
@@ -20,6 +19,9 @@ export const Home = () => {
         <section className="bordered section4"></section>
         <section className="bordered section5"></section>
       </main>
+      <footer>
+        &copy; 2022
+      </footer>
     </div>
   );
 };
