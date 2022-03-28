@@ -54,6 +54,9 @@
     }
     > .section2 {
       grid-area: box2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     > .section3 {
       grid-area: box3;
@@ -64,7 +67,13 @@
     > .section5 {
       grid-area: box5;
     }
-    .管辖统计, .破获排名 {
+    .管辖统计,
+    .破获排名,
+    .发案趋势,
+    .案发时段,
+    .战果,
+    .籍贯,
+    .年龄段 {
       height: px(315);
       display: flex;
       flex-direction: column;
@@ -84,6 +93,7 @@
         width: 100%;
       }
     }
+
     .破获排名 {
       height: px(423);
       .legend {
@@ -108,6 +118,96 @@
         }
       }
     }
+
+    .发案趋势,
+    .案发时段 {
+      height: px(363);
+    }
+
+    .战果 {
+      > table {
+        margin-top: px(38);
+        border-collapse: collapse;
+        th,
+        td {
+          border: 1px solid #1a3671;
+        }
+        thead {
+          th {
+            height: px(70);
+            box-shadow: inset 0 0 px(60) 0 #1f3d85;
+          }
+        }
+        tbody {
+          td {
+            height: px(50);
+            width: px(84);
+            background: #1c2456;
+          }
+        }
+      }
+    }
+
+    .籍贯 {
+      height: px(753);
+      background: transparent;
+      > .wrapper {
+        position: relative;
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .chart {
+          flex: 1;
+        }
+        .legend {
+          position: absolute;
+          top: px(40);
+          left: px(20);
+          display: flex;
+          align-items: center;
+          font-size: px(22);
+          padding: px(20) px(10) px(20) 0;
+          border-radius: 0;
+          .icon {
+            margin: 0 px(10);
+            display: inline-block;
+            width: px(16);
+            height: px(16);
+            border-radius: 50%;
+            background: #1cecd9;
+          }
+        }
+        .notes {
+          position: absolute;
+          bottom: px(10);
+          right: px(10);
+        }
+      }
+    }
+
+    .年龄段 {
+      display: flex;
+      flex-direction: column;
+      height: px(363);
+      > .charts {
+        width: 100%;
+        flex: 1;
+        border: 1px solid red;
+        display: flex;
+        padding: px(30);
+      }
+      &-图1,
+      &-图2,
+      &-图3 {
+        flex: 1;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    
   }
   > footer {
     height: px(68);
