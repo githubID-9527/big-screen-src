@@ -107,7 +107,6 @@
           display: inline-block;
           width: px(18);
           height: px(12);
-          background: red;
           margin: 0 px(10);
         }
         .first {
@@ -200,7 +199,6 @@
       &-图2,
       &-图3 {
         flex: 1;
-        border: 1px solid red;
         display: flex;
         flex-direction: column;
       }
@@ -252,7 +250,10 @@
         }
       }
 
-      
+      &-图3 {
+        border: 1px solid #08397d;
+        h3 {font-size: px(20); color: #7ab6db; margin-top: px(6);}
+      }
     }
   }
 
